@@ -12,7 +12,7 @@ Include this script *after* jQuery is loaded:
 
 ## Options
 
- - interval `500`: The amount of milliseconds between checks
+ - interval `500`: The amount of milliseconds between checks. Set it to a higher value when you have a lot of images to preload.
  - notifyErrors `false`: By default the plugin notifies only when a source is fully loaded ignoring
  all errors. If this options is set to `true` errors will be notified as progress as well.
 
