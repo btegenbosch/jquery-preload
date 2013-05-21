@@ -12,29 +12,31 @@ Include this script *after* jQuery is loaded:
 
 ## Options
 
- - interval [`500`]: The amount of milliseconds between checks
- - notifyErrors [`false`]: By default the plugin notifies only when a source is fully loaded ignoring
+ - interval `500`: The amount of milliseconds between checks
+ - notifyErrors `false`: By default the plugin notifies only when a source is fully loaded ignoring
  all errors. If this options is set to `true` errors will be notified as progress as well.
 
 ## Usage
 
     $.preload(sources, options);
+    
+*`sources` can be an array of strings or just a single string.*
 
 Append images to a container when all sources are loaded.
 
-    $.preload(['http://example.com/my.jpg']).done(function (images) {
+    $.preload(['1.jpg', '2.jpg']).done(function (images) {
         $('#image-container').append(images);
     });
     
 By notified when a single image is loaded.
 
-    $.preload(['http://example.com/my.jpg']).progress(function (image) {
+    $.preload(['1.jpg', '2.jpg']).progress(function (image) {
         alert('Loaded image: ' + image.src);
     });
     
 By notified when a image failed to load.
 
-    $.preload(['http://example.com/my.jpg']).progress(function (image, isError) {
+    $.preload(['1.jpg', '2.jpg']).progress(function (image, isError) {
     	if (isError) {
             alert('Failed to load image: ' + image.src);
         }
