@@ -50,7 +50,7 @@
 			var image = new Image();
 			image.src = source.toString();
 			
-			var interval = window.setInterval(function () {
+			var interval = window.setInterval(function updateProgress () {
 				
 				// the image is fully loaded
 				if (image.complete) {
