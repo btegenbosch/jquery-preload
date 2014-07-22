@@ -28,13 +28,13 @@ Append images to a container when all sources are loaded.
         $('#image-container').append(images);
     });
     
-By notified when a single image is loaded.
+Be notified when a single image is loaded.
 
     $.preload(['1.jpg', '2.jpg']).progress(function (image) {
         alert('Loaded image: ' + image.src);
     });
     
-By notified when a image failed to load.
+Be notified when a image failed to load.
 
     $.preload(['1.jpg', '2.jpg']).progress(function (image, isError) {
     	if (isError) {
